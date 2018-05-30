@@ -1,0 +1,37 @@
+.address2, .address3,	.address4, .address5, .address6, .address7,	.address8, .address9,	.address10,
+.check2, .check3, .check4, .check5, .check6, .check7, .check8, .check9{
+	display: none;
+}
+.check1:checked~.address2,
+.check2:checked~.address3,
+.check3:checked~.address4,
+.check4:checked~.address5,
+.check5:checked~.address6,
+.check6:checked~.address7,
+.check7:checked~.address8,
+.check8:checked~.address9,
+.check9:checked~.address10,
+.check1:checked~.address2 .check2,
+.check2:checked~.address3 .check3,
+.check3:checked~.address4 .check4,
+.check4:checked~.address5 .check5,
+.check5:checked~.address6 .check6,
+.check6:checked~.address7 .check7,
+.check7:checked~.address8 .check8,
+.check8:checked~.address9 .check9{
+	display: inline-block;
+}
+form{
+	width: 650px;
+}
+[type="text"]{
+	width: 580px;
+	box-sizing: border-box;
+}
+textarea{
+	margin-top: -17px;
+	width: 580px;
+	height: 240px;
+	resize: vertical;
+	box-sizing: border-box;
+}
