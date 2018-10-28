@@ -1,4 +1,5 @@
 window.onload = function(){
+    /*GoogleDoc*/
     let getJSON = function(url, callback){
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
@@ -31,4 +32,20 @@ window.onload = function(){
         }
         return out;
     }
+
+
+    /*TimeConverter*/
+    function timeConverter (unixTime){
+        let timeNow = new Date(unixTime * 1000);
+        let months = ["Січня", "Лютого", "Березня", "Квітня", "Травня", "Червня", "Липня", "Серпня", "Вересня", "Жовтня", "Листопада", "Грудня"];
+        let year = timeNow.getFullYear();
+        let month = months[timeNow.getMonth()];
+        let date = timeNow.getDate();
+        let hour = timeNow.getHours();
+        let min = timeNow.getMinutes();
+        let sec = timeNow.getSeconds();
+        let time = date + " " + month + " " + year + " року " + hour + " годин " + min + " хвилин " + sec + " секунд";
+        return time;
+    }
+    console.log(timeConverter(Date.now() / 1000));
 };
